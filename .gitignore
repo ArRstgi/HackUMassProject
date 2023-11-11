@@ -161,3 +161,7 @@ cython_debug/
 
 # Block .history
 *.history
+
+#Block messages.json
+*/messages.json
+*.json
