@@ -10,6 +10,3 @@ def sentimentAnalyzer(testToBeAnalyzed:str)->bool:
     if outOfFiveStars > 3:
         return True
     return False
-
-if __name__ == '__main__':
-    print(sentimentAnalyzer('Arush'))
