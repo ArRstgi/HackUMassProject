@@ -1,12 +1,15 @@
+// app.js
+
 import "./App.css";
 
-import Message from "./message.js";
+import MessagesView from "./messages_view.js";
+import SendMessageView from "./send_message.js";
 
 function App() {
   return (
     <div className="App">
-      <p>test</p>
-      <Message message_content="this is the message's content" />
+      <MessagesView className="messages-view" />
+      <SendMessageView className="send-messages-box" />
     </div>
   );
 }
