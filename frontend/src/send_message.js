@@ -26,7 +26,7 @@ class SendMessageView extends React.Component {
 
   render() {
     return (
-      <div>
+      <div  className="messages-view">
         <TextArea id="message-submission" rows={20} />
         <Button onClick={this.send_message}>Post Message</Button>
       </div>

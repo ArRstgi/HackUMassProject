@@ -6,9 +6,9 @@
 
 .messages-view {
   overflow-y: auto;
-  background-color: white;
+  background-color: #26343f;
 }
 
 .send-messages-box {
-  background-color: white; 
+  background-color: #26343f; 
 }
