@@ -21,6 +21,8 @@ function Message(props) {
           style={{
             width: 700,
             marginTop: 16,
+            fontWeight: 600,
+            fontFamily: 'Monospace'
           }}
         >
           {props.message_content}

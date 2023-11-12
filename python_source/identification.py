@@ -23,13 +23,12 @@ def sentimentAnalyzer(textToBeAnalyzed:str)->bool:
 def sentimentManipulator(textToBeManipulated:str)->str:
     prompt = textToBeManipulated
     listOfWords = prompt.split(" ")
-    print(listOfWords)
     numberOfWords = len(listOfWords) * 5
-    print(numberOfWords)
     generatedText = "bad"
     epochs = 20
     while (sentimentAnalyzer(generatedText)==False and epochs > 0):
         generator = pipeline(task="text2text-generation", model="cffl/bart-base-styletransfer-subjective-to-neutral", max_length=numberOfWords)
         generatedText = (generator(prompt)[0]['generated_text'])
         epochs = epochs - 1
-    return generatedText
+    textToReturn = str(generatedText)
+    return textToReturn
