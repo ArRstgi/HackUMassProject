@@ -1,11 +1,13 @@
 import "./App.css";
 
 import MessagesView from "./messages_view.js";
+import SendMessageView from "./send_message.js";
 
 function App() {
   return (
     <div className="App">
-      <MessagesView messages={["message 1", "message 2"]} />
+      <MessagesView className="messages-view" />
+      <SendMessageView className="send-messages-box" />
     </div>
   );
 }

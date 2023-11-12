@@ -2,5 +2,7 @@
   { "content": "Message 1", "time": 0 },
   { "content": "Message 2", "time": 0 },
   { "content": "Message 3", "time": 0 },
-  { "content": "Message 4", "time": 0 }
+  { "content": "Message 4", "time": 0 },
+  { "content": "Message this is a cool message", "time": 0 },
+  { "content": "Message 40", "time": 0 }
 ]
