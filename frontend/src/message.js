@@ -14,17 +14,13 @@ const { Meta } = Card;
 
 function Message(props) {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '20vh' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '15vh' }}>
       <div>
         <Card
           style={{
             width: 400,
             marginTop: 16,
           }}
-          actions={[
-            <EllipsisOutlined key="ellipsis" />,
-            <EditOutlined key="edit" />,
-          ]}
         >
         <Meta
           description={props.message_content}
