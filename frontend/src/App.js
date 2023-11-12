@@ -1,12 +1,11 @@
 import "./App.css";
 
-import Message from "./message.js";
+import MessagesView from "./messages_view.js";
 
 function App() {
   return (
     <div className="App">
-      <p>test</p>
-      <Message message_content="this is the message's content" />
+      <MessagesView messages={["message 1", "message 2"]} />
     </div>
   );
 }
