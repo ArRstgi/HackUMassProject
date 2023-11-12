@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, Button } from "antd";
+import { Input, Button, ConfigProvider } from "antd";
 
 const { TextArea } = Input;
 
@@ -28,10 +28,20 @@ class SendMessageView extends React.Component {
 
   render() {
     return (
+      <ConfigProvider
+      theme={{
+        token: {
+          colorPrimary : "#26343f",
+          colorPrimaryText: "fffff0"
+          
+        },
+      }}
+      >
       <div  className="messages-view">
         <TextArea className="text-box" id="message-submission" rows={20}/>
         <Button className="submit-button" onClick={this.send_message} type="primary" shape="round" size={'middle'}>Post Message</Button>
       </div>
+      </ConfigProvider>
     );
   }
 }
