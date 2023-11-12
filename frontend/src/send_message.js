@@ -8,11 +8,28 @@ class SendMessageView extends React.Component {
     super(props);
   }
 
+  send_message() {
+    let message_content =
+      document.getElementById("message-submission").textContent;
+    x``;
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.open("POST", "http://127.0.0.1:5000/send_message");
+
+    let formData = new FormData();
+
+    formData.append("message_content", message_content);
+    formData.append("message_time", 0);
+
+    xhr.send(formData);
+  }
+
   render() {
     return (
       <div>
-        <TextArea rows={20} />
-        <Button>Post Message</Button>
+        <TextArea id="message-submission" rows={20} />
+        <Button onClick={this.send_message}>Post Message</Button>
       </div>
     );
   }
