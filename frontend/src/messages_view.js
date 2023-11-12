@@ -5,11 +5,25 @@ import Message from "./message.js";
 class MessagesView extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { messages: [] };
-    this.get_messages();
+    //this.state = { messages: JSON.parse(localStorage.getItem("messages")) };
+    //this.add_messages_to_local_storage();
+
+    /*window.addEventListener(
+      "new-message",
+      this.get_messages_from_local_storage()
+    );*/
+    /*window.addEventListener("new-message", () => {
+      alert("new-message event called");
+    });*/
   }
 
-  get_messages() {
+  /*get_messages_from_local_storage() {
+    if (JSON.parse(localStorage.getItem("messages")) != this.state.messages) {
+      this.setState({ messages: JSON.parse(localStorage.getItem("messages")) });
+    }
+  }*/
+
+  /*add_messages_to_local_storage() {
     const xhr = new XMLHttpRequest();
 
     xhr.open("GET", "http://127.0.0.1:5000/get_messages");
@@ -17,9 +31,12 @@ class MessagesView extends React.Component {
 
     xhr.onload = () => {
       console.log(xhr.responseText);
-      this.setState({ messages: JSON.parse(xhr.responseText) });
+      if (xhr.responseText != localStorage.getItem("messages")) {
+        localStorage.setItem("messages", xhr.responseText);
+        this.get_messages_from_local_storage();
+      }
     };
-  }
+  }*/
 
   render() {
     return (
@@ -32,7 +49,7 @@ class MessagesView extends React.Component {
           overflowY: "auto",
         }}
       >
-        {this.state.messages.reverse().map((message) => {
+        {this.props.messages.reverse().map((message) => {
           return <Message message_content={message.content} />;
         })}
       </div>

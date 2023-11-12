@@ -1,35 +1,55 @@
 // app.js
-import { ConfigProvider } from 'antd';
+import { ConfigProvider } from "antd";
 import "./App.css";
+import React from "react";
 
 import MessagesView from "./messages_view.js";
+import Messages from "./messages.js";
 import SendMessageView from "./send_message.js";
 
-function App() {
-  return (
-    <ConfigProvider
-    theme={{
-      token: {
-        // Seed Token
-        //colorPrimary: '#8f1a00',
-        //borderRadius: 2,
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { messages: [] };
+  }
+  render() {
+    /*const xhr = new XMLHttpRequest();
 
-        // Alias Token
-        colorBgContainer: '#fffff0',
-        colorBorderSecondary:'#b3b3a0'
-      },
-    }}
-    >
+    xhr.open("GET", "http://127.0.0.1:5000/get_messages");
+    xhr.send();
 
-    <div className="App">
-      <MessagesView className="messages-view" />
-      <SendMessageView className="send-messages-box" />
-    </div>
+    xhr.onload = () => {
+      console.log(xhr.responseText);
+      localStorage.setItem("messages", xhr.responseText);
+      this.setState({ messages: JSON.parse(localStorage.getItem("messages")) });
+      window.addEventListener("new-message", () => {
+        this.setState({
+          messages: JSON.parse(localStorage.getItem("messages")),
+        });
+      });
+    };*/
 
-    </ConfigProvider>
-  );
+    return (
+      <ConfigProvider
+        theme={{
+          token: {
+            // Seed Token
+            //colorPrimary: '#8f1a00',
+            //borderRadius: 2,
+
+            // Alias Token
+            colorBgContainer: "#fffff0",
+            colorBorderSecondary: "#b3b3a0",
+          },
+        }}
+      >
+        <div className="App">
+          <Messages></Messages>
+          <SendMessageView className="send-messages-box" />
+        </div>
+      </ConfigProvider>
+    );
+  }
 }
-
-
 
 export default App;
