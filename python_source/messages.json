@@ -1,1 +1,6 @@
-[{"content": "Message 1", "time": 0}]
+[
+  { "content": "Message 1", "time": 0 },
+  { "content": "Message 2", "time": 0 },
+  { "content": "Message 3", "time": 0 },
+  { "content": "Message 4", "time": 0 }
+]
