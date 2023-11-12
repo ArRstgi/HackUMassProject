@@ -11,7 +11,6 @@ class SendMessageView extends React.Component {
   send_message() {
     let message_content =
       document.getElementById("message-submission").textContent;
-    x``;
 
     const xhr = new XMLHttpRequest();
 
