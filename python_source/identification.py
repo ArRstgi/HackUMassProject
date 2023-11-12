@@ -1,6 +1,15 @@
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 
+def verify_message_contents(message_content):
+    if message_content == "":
+        return False
+    else:
+        if sentimentAnalyzer(message_content) is True:
+            return True
+        else:
+            return False
+
 def sentimentAnalyzer(testToBeAnalyzed:str)->bool:
     tokenizer = AutoTokenizer.from_pretrained('nlptown/bert-base-multilingual-uncased-sentiment')
     model = AutoModelForSequenceClassification.from_pretrained('nlptown/bert-base-multilingual-uncased-sentiment')
