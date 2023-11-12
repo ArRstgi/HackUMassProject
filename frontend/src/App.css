@@ -1,0 +1,14 @@
+.App {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100vh;
+}
+
+.messages-view {
+  overflow-y: auto;
+  background-color: white;
+}
+
+.send-messages-box {
+  background-color: white; 
+}
