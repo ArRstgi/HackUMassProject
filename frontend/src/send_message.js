@@ -31,7 +31,7 @@ class SendMessageView extends React.Component {
       <ConfigProvider
       theme={{
         token: {
-          colorPrimary : "#26343f",
+          colorPrimary : "#2f414f",
           colorPrimaryText: "fffff0"
           
         },
