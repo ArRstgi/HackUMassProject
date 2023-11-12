@@ -32,7 +32,8 @@ class SendMessageView extends React.Component {
       theme={{
         token: {
           colorPrimary : "#2f414f",
-          colorPrimaryText: "fffff0"
+          colorPrimaryText: "fffff0",
+          fontFamily: 'Monospace'
           
         },
       }}
