@@ -23,15 +23,9 @@ class SendMessageView extends React.Component {
 
     xhr.send(formData);
 
-    let messages = JSON.parse(localStorage.getItem("messages"));
-    messages[messages.length] = {
-      message_content: message_content,
-      message_time: 0,
+    xhr.onload = () => {
+      window.dispatchEvent(new Event("new-message"));
     };
-
-    localStorage.setItem("messages", JSON.stringify(messages));
-
-    window.dispatchEvent(new Event("new-message"));
   }
 
   render() {
