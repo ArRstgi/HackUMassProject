@@ -23,8 +23,15 @@ class MessagesView extends React.Component {
 
   render() {
     return (
-      <div style={{ display: 'flex', flexDirection: 'column', height: '100%', overflowY: 'auto' }}>
-        {this.state.messages.map((message) => {
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
+          overflowY: "auto",
+        }}
+      >
+        {this.state.messages.reverse().map((message) => {
           return <Message message_content={message.content} />;
         })}
       </div>
