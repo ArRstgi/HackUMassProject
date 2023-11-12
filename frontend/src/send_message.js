@@ -26,9 +26,9 @@ class SendMessageView extends React.Component {
 
   render() {
     return (
-      <div>
-        <TextArea className="text-box" id="message-submission" rows={20}/>
-        <Button className="submit-button" onClick={this.send_message} type="primary" shape="round" size={'middle'}>Post Message</Button>
+      <div  className="messages-view">
+        <TextArea id="message-submission" rows={20} />
+        <Button onClick={this.send_message}>Post Message</Button>
       </div>
     );
   }
