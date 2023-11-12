@@ -5,16 +5,16 @@ const { Meta } = Card;
 
 function Message(props) {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '15vh' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '20vh' }}>
       <div>
         <Card
           style={{
-            width: 400,
+            width: 700,
             marginTop: 16,
           }}
         >
         <Meta
-          description={props.message_content}
+          title={props.message_content}
         />
         </Card>
       </div>
