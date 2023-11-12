@@ -1,3 +1,5 @@
+// app.js
+
 import "./App.css";
 
 import MessagesView from "./messages_view.js";
