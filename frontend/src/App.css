@@ -12,3 +12,17 @@
 .send-messages-box {
   background-color: #26343f; 
 }
+
+.submit-button {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 7px;
+  margin-bottom: 7px;
+}
+
+.text-box {
+  margin-top: 20px;
+  display: flex;
+  margin-left: 20px;
+  width: 92%;
+}
